@@ -2,8 +2,10 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { useEffect, useState } from "react";
-import { Alert, Container, Spinner } from "react-bootstrap";
+import { Container} from "react-bootstrap";
 import EachFilm from "./EachFilm";
+import Error from "./Error";
+import Loader from "./Loader";
 
 const responsive = {
   desktopLarge: {
@@ -94,25 +96,14 @@ const MyGallery = function (props) {
         {
           // LOADING HANDLER
           isLoading && (
-            <div className="text-center">
-              <Spinner animation="border" variant="white" />
-              <span className="text-white ">Loading...</span>
-            </div>
+            <Loader />
           )
         }
         {
           // ERROR HANDLER
           isError && (
             <>
-              <Alert variant="danger">
-                <Alert.Heading>
-                  Oh snap! The films you are searching for are unavailable!
-                </Alert.Heading>
-                <p>
-                  It seems you&apos;ve entered an incorrect word. Please check
-                  the spelling and try again
-                </p>
-              </Alert>
+              <Error/>
             </>
           )
         }

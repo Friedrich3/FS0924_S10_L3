@@ -23,7 +23,7 @@ const  SearchCarousel = function() {
                 type="text"
                 placeholder="Search your movie..."
                 value={filmSearch}
-                className=" border-0 text-light col"
+                className=" border-0 col"
                 onChange={(e) => {
                   setFilmSearch(e.target.value)
                   setIsVisible(true)

@@ -25,3 +25,8 @@ footer li a:hover,footer li a:visited{
   overflow: hidden;
   height: 3rem;
 }
+
+.custom-class:hover{
+  cursor: pointer;
+  border: 1px solid yellowgreen;
+}

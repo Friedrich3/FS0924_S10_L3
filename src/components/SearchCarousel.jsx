@@ -21,8 +21,9 @@ const  SearchCarousel = function() {
             <Form.Group className="row">
               <Form.Control
                 type="text"
+                placeholder="Search your movie..."
                 value={filmSearch}
-                className="bg-dark border-0 text-light col"
+                className=" border-0 text-light col"
                 onChange={(e) => {
                   setFilmSearch(e.target.value)
                   setIsVisible(true)

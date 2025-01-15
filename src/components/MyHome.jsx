@@ -1,13 +1,12 @@
-import { Component } from "react";
 import MyGallery from "./MyGallery";
 import {Container} from "react-bootstrap";
 import SearchCarousel from "./SearchCarousel";
 
 
-class MyHome extends Component {
+const MyHome = function () {
   
 
-  render() {
+
     return (
       <main className="bg-black container-fluid">
         <h2 className="text-light">Movies</h2>
@@ -26,7 +25,7 @@ class MyHome extends Component {
         </Container>
       </main>
     );
-  }
+
 }
 
 export default MyHome;

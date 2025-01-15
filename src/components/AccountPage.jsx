@@ -1,8 +1,7 @@
-import { Component } from "react";
 import { Button, Col, Container, Image, Row } from "react-bootstrap";
 
-class AccountPage extends Component {
-  render() {
+const  AccountPage = function() {
+  
     return (
       <main>
         <Container fluid className="d-flex w-75 flex-column">
@@ -141,6 +140,6 @@ class AccountPage extends Component {
       </main>
     );
   }
-}
+
 
 export default AccountPage;

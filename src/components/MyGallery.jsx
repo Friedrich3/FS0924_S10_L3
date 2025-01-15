@@ -61,12 +61,10 @@ const MyGallery = function (props) {
             setFilmList(data.Search);
             setIsError(false);
             setIsLoading(false);
-            props.setIsVisible(true)
-            
+            props.setIsVisible(true);
           } else {
             setIsError(true);
             setIsLoading(false);
-            
           }
         } else {
           throw new Error("Problema con fetch");
@@ -75,9 +73,9 @@ const MyGallery = function (props) {
         console.log("Errore:", error);
       }
     } else {
-     setIsLoading(false)
-     setIsError(false)
-     props.setIsVisible(false)
+      setIsLoading(false);
+      setIsError(false);
+      props.setIsVisible(false);
     }
   };
 

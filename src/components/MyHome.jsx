@@ -1,9 +1,13 @@
 import MyGallery from "./MyGallery";
 import {Container} from "react-bootstrap";
 import SearchCarousel from "./SearchCarousel";
+import { useState } from "react";
 
 
 const MyHome = function () {
+
+  // eslint-disable-next-line no-unused-vars
+  const [isVisible , setIsVisible] = useState(true)
   
 
 
@@ -19,9 +23,9 @@ const MyHome = function () {
         <Container fluid>
           {/* QUESTA SEZIONE AVRA' al suo interno le tre gallerie che riceveranno come props cosa cercare */}
           <h3 className=" text-light">Altri Titoli per Te</h3>
-          <MyGallery research="Transformers" />
-          <MyGallery research="Godzilla" />
-          <MyGallery research="Harry Potter" />
+          <MyGallery research="Transformers"  setIsVisible={setIsVisible}/>
+          <MyGallery research="Godzilla"  setIsVisible={setIsVisible}/>
+          <MyGallery research="Harry Potter"  setIsVisible={setIsVisible}/>
         </Container>
       </main>
     );
